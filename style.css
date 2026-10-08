@@ -12,6 +12,7 @@
     --transition: all 0.3s ease;
     --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     --max-width: 1200px;
+    --min-height: 60vh;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -61,16 +62,16 @@ header .container {
 
 #logo-image {
     width: 150px;
-    height: 100px;
+    height: 150px;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 20px;
+    left: 20px;
     transition: transform 0.5s ease;
     transform-origin: center;
 }
 
 #logo-image:hover {
-    transform: rotate(-6deg) scale(1.1);
+    transform: rotate(-6deg) scale(1.9);
 }
 
 #PageTitle h1 {
@@ -144,6 +145,43 @@ nav li a.active {
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
+/* Home Styles */
+#homeContainer{
+    max-width: var(--max-width);
+    min-height: var(--min-height);
+    margin: 0 auto;
+    display: grid;
+}
+
+#homeButtons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.homeButton{
+    width: 450px;
+    height: 100px;
+    margin: 60px;
+
+    background: var(--card-bg);
+    border: 4px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 1rem 3rem;
+    font-size: 48px;
+    color: #1F1F1F;
+    cursor: pointer;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
 /* Filter Bar Styles */
 #optionFilterBar{
     display: flex;
@@ -203,7 +241,6 @@ nav li a.active {
 .filterButton.active span {
     color: white;
 }
-
 
 /*----------------------------------------------------------------------------------------------------------------------*/
 /* Project Styles */
