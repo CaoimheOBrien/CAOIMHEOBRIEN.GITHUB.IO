@@ -12,6 +12,7 @@
     --transition: all 0.3s ease;
     --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
     --max-width: 1200px;
+    --min-height: 60vh;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Inter', sans-serif;
 }
@@ -61,16 +62,16 @@ header .container {
 
 #logo-image {
     width: 150px;
-    height: 100px;
+    height: 150px;
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 20px;
+    left: 20px;
     transition: transform 0.5s ease;
     transform-origin: center;
 }
 
 #logo-image:hover {
-    transform: rotate(-6deg) scale(1.1);
+    transform: rotate(-6deg) scale(1.9);
 }
 
 #PageTitle h1 {
@@ -144,6 +145,50 @@ nav li a.active {
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
+/* Home Styles */
+#homeContainer{
+    max-width: var(--max-width);
+    min-height: var(--min-height);
+    margin: 0 auto;
+    display: grid;
+}
+
+#homeButtons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.homeButton{
+    width: 450px;
+    height: 100px;
+    margin: 60px;
+
+    background: var(--card-bg);
+    border: 4px solid var(--accent-color);
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: #1f1f1f;
+    font-size: 56px;
+    transition: all 0.3s ease;
+}
+
+.homeButton:hover {
+    background-color: var(--accent-light);
+    color: var(--accent);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
 /* Filter Bar Styles */
 #optionFilterBar{
     display: flex;
@@ -154,9 +199,9 @@ nav li a.active {
 }
 
 .filterButton{
-    width: 150px;
+    width: 190px;
     height: 40px;
-    margin: 30px;
+    margin: 20px;
 
     background: var(--card-bg);
     border: 1px solid var(--accent-color);
@@ -204,7 +249,6 @@ nav li a.active {
     color: white;
 }
 
-
 /*----------------------------------------------------------------------------------------------------------------------*/
 /* Project Styles */
 #projectsContainer{
@@ -251,7 +295,7 @@ p{
     text-align: left;
 }
 
-#websites, #conceptArts, #storyboards, #animations, #games, #misc{
+#websites, #conceptArts, #storyboards, #animations, #games, #threeDModels, #misc{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 30px;
@@ -337,8 +381,8 @@ td{
 }
 
 .icon{
-    width: 40px;
-    height: 40px;
+    width: 70px;
+    height: 70px;
 
     margin-top: auto;
     margin-left: auto;
@@ -347,14 +391,14 @@ td{
 #aboutMeAside{
     width: 50%;
     max-width: 350px;
-    margin: 4rem 2rem;
+    margin: 4rem 4rem;
     padding: 1rem;
     float: right;
     background: var(--accent-light);
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     text-align: center; 
-    z-index: 200;
+    z-index: 220;
 }
 
 #profile-pic{
@@ -372,7 +416,7 @@ td{
     margin: auto; 
     width: 100%;
     min-width: 100px;
-    max-width: 2800px;
+    max-width: 3800px;
     height: 100%;
     max-height: 120vh;
     background: rgba(10, 10, 10, 0.7);
@@ -399,9 +443,11 @@ td{
     font-family: var(--font-heading);
     margin-bottom: 1rem;
 }
+
 #empty{
     display: hidden;
 }
+
 .modal img {
     margin: 1rem 0;
     padding: 2px;
@@ -481,9 +527,8 @@ footer {
     padding: 1rem 0.5rem;
     background: var(--card-bg);
     color: var(--light-text);
-    margin-top: 3rem;
+    margin-top: 13rem;
     bottom: 0;
-    border-top: 1px solid #e5e5e5;
     animation: fadeIn 0.8s ease;
 }
 
@@ -517,13 +562,13 @@ footer {
     #aboutMeAside{
         max-width: 300px;
         font-size: 12px;
+        margin: 2rem 4rem;
     }
 
     .contactTable{
         max-width: 900px;
         width: 100%;
     }
-
 }
 
 @media (max-width: 1475px) { /*For contact table*/
@@ -679,7 +724,7 @@ footer {
     #conceptArts,
     #storyboards,
     #animations,
-    #games,
+    #games, #threeDModels,
     #misc {
         grid-template-columns: repeat(2, minmax(280px, 1fr));
         gap: 20px;
@@ -884,7 +929,7 @@ footer {
     /* Filters */
     .filterButton {
         width: 100%;
-        max-width: 100px;
+        max-width: 120px;
         height: auto;
         padding: 10px;
         font-size: 12px;
@@ -901,7 +946,7 @@ footer {
     #conceptArts,
     #storyboards,
     #animations,
-    #games,
+    #games, #threeDModels,
     #misc {
         grid-template-columns: 1fr;
     }
