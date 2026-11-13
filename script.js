@@ -1,186 +1,124 @@
-//Author: Caoimhe O'Brien
+// Open modal when a project card is clicked with animation
+const projects = document.querySelectorAll(".project");
 
-//Filters projects shown based on the category button clicked --> default is "all"
-document.addEventListener("DOMContentLoaded", function () {
-    const filterButtons = document.querySelectorAll(".filterButton"); // gets all the filter buttons
-    const section = document.querySelectorAll(".section"); // gets all the sections 
-    
-    function filterProjects(filter) {
-        section.forEach(item => {
-            const category = item.getAttribute("data-category"); // gets the category of the project
-            if (filter === "all" || filter === category) { // if "all" or the filter's categopry is selected then display 
-                item.style.display = ""; // shows the item if it matches the filter or if 'all' is selected
-            }
-            else {
-                item.style.display = "none"; //  or else don't display
-            }
-        });
-    }
+// Opening the modals
+projects.forEach(project => {
 
-    filterButtons.forEach(button => {
-        button.addEventListener("click", function () {
-            const filter = this.getAttribute("data-filter"); // gets the filter from the button clicked
-            filterProjects(filter); // calls the function to filter projects based on the button clicked
-        });
+    project.addEventListener("click", () => {
+
+        const modalId = project.dataset.modal;
+        const modal = document.getElementById(modalId);
+
+        if (modal) {
+
+            modal.style.display = "flex";
+
+            // ADD THIS
+            modal.classList.add("open");
+
+            modal.style.opacity = 0;
+            modal.style.transform = "scale(0.95)";
+            modal.style.transition = "opacity 0.3s ease, transform 0.3s ease";
+
+            requestAnimationFrame(() => {
+                modal.style.opacity = 1;
+                modal.style.transform = "scale(1)";
+            });
+
+            //Gallery reset
+            currentImageIndex = 0;
+            showSlide(currentImageIndex);
+        }
     });
-
-    // Initial display of all projects when the page loads
-    filterProjects("all");
 });
 
+// Close modal when clicking X with animation
+const closeButtons = document.querySelectorAll(".close");
 
-// Modal Script 
-// Get the modal
-var modal = document.getElementById("thisPortfolioModal");
-var btn = document.getElementById("readmoreButtonTP");// Get the button that opens the modal for "This Portfolio"
-var span = document.getElementsByClassName("close")[0];// Get the <span> element that closes the modal
+// The actual close button
+closeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const modal = btn.closest(".modal");
+        closeModal(modal);
+    });
+});
 
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-    modal.style.display = "block";
+// Close modal when clicking outside content
+window.addEventListener("click", e => {
+    document.querySelectorAll(".modal").forEach(modal => {
+        if (e.target === modal) {
+            closeModal(modal);
+        }
+    });
 }
+);
 
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
+// Actually close the modal
+function closeModal(modal) {
+    modal.style.opacity = 0;
+    modal.style.transform = "scale(0.95)";
+    setTimeout(() => {
         modal.style.display = "none";
+        modal.classList.remove("open");
+    }, 300);
+}
+
+// Project filtering
+const filterButtons = document.querySelectorAll(".filterButton"); // gets all the filter buttons
+const section = document.querySelectorAll(".section"); // gets all the sections 
+
+function filterProjects(filter) {
+    section.forEach(item => {
+        const category = item.getAttribute("data-category"); // gets the category of the project
+        if (filter === "all" || filter === category) { // if "all" or the filter's categopry is selected then display 
+            item.style.display = ""; // shows the item if it matches the filter or if 'all' is selected
+        }
+        else {
+            item.style.display = "none"; //  or else don't display
+        }
+    });
+}
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", function () {
+        const filter = this.getAttribute("data-filter"); // gets the filter from the button clicked
+        filterProjects(filter); // calls the function to filter projects based on the button clicked
+    });
+});
+
+// Initial display of all projects when the page loads
+filterProjects("all");
+
+// Gallery 
+let currentImageIndex = 0;
+
+function showSlide(index) {
+    const openModal = document.querySelector(".modal.open"); // which modal is open
+    if (!openModal) return; // if no modal is open, exit the function
+
+    let slides = openModal.querySelectorAll(".modal-slide, [class^='modalImage']");
+
+    if (slides.length === 0) return; // if no slides found, exit the function
+
+    if (index >= slides.length) {
+        currentImageIndex = 0; // loop back to the first image
     }
-}
-
-// Sage Academy Modal
-var modalSgA = document.getElementById("SageAcademyModal");
-var btnSgA = document.getElementById("readmoreButtonSgA");// Get the button that opens the modal for "Sage Academy"
-var span2 = document.getElementsByClassName("close")[1];// Get the <span> element that closes the modal
-
-// When the user clicks the button, open the modal
-btnSgA.onclick = function() {
-    modalSgA.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span2.onclick = function() {
-    modalSgA.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalSgA) {
-        modalSgA.style.display = "none";
+    else if (index < 0) {
+        currentImageIndex = slides.length - 1; // loop to the last image
     }
+
+    slides.forEach(slide => slide.classList.remove("active")); // hide all images
+    slides[currentImageIndex].classList.add("active"); // show the current image
 }
 
-//Old Portfolio Modal
-var modalOP = document.getElementById("oldPortfolioModal");
-var btnOP = document.getElementById("readmoreButtonOP");// Get the button that opens the modal for "Old Portfolio"
-var span3 = document.getElementsByClassName("close")[2];// Get the <span> element that closes the modal
-
-// When the user clicks the button, open the modal
-btnOP.onclick = function() {
-    modalOP.style.display = "block";
+window.changeSlide = function(direction){
+    showSlide(currentImageIndex += direction);
 }
 
-// When the user clicks on <span> (x), close the modal
-span3.onclick = function() {
-    modalOP.style.display = "none";
-}
+// Responsiveness stuff for nav
+const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector("nav ul");
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalOP) {
-        modalOP.style.display = "none";
-    }
-}
-
-//Enemy Animation Modal
-var modalEA = document.getElementById("enemiesAnimationModal");
-var btnEA = document.getElementById("readmoreButtonEA");// Get the button that opens the modal for "Enemy Animation"
-var span4 = document.getElementsByClassName("close")[3];// Get the <span> element that closes the modal 
-
-// When the user clicks the button, open the modal
-btnEA.onclick = function() {
-    modalEA.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span4.onclick = function() {
-    modalEA.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalEA) {
-        modalEA.style.display = "none";
-    }
-}
-
-//Coffee Utopia Modal
-var modalCU = document.getElementById("coffeeUtopiaModal");
-var btnCU = document.getElementById("readmoreButtonCU");// Get the button that opens the modal for "Coffee Utopia"
-var span5 = document.getElementsByClassName("close")[4];// Get the <span> element that closes the modal 
-
-// When the user clicks the button, open the modal
-btnCU.onclick = function() {
-    modalCU.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span5.onclick = function() {
-    modalCU.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalCU) {
-        modalCU.style.display = "none";
-    }
-}
-
-//Game Assets Modal
-var modalGA = document.getElementById("gameAssetsModal");
-var btnGA = document.getElementById("readmoreButtonGA");// Get the button that opens the modal for "Game Assets"
-var span6 = document.getElementsByClassName("close")[5];// Get the <span> element that closes the modal
-
-// When the user clicks the button, open the modal
-btnGA.onclick = function() {
-    modalGA.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span6.onclick = function() {
-    modalGA.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalGA) {
-        modalGA.style.display = "none";
-    }
-}
-
-//Optometry Poster Modal
-var modalOptPos = document.getElementById("optometryPosterModal");
-var btnOptPOs = document.getElementById("readmoreButtonOptPos");// Get the button that opens the modal for "Optometry Poster"
-var span7 = document.getElementsByClassName("close")[6];// Get the <span> element that closes the modal 
-
-// When the user clicks the button, open the modal
-btnOptPOs.onclick = function() {
-    modalOptPos.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span7.onclick = function() {
-    modalOptPos.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modalOptPOs) {
-        modalOptPos.style.display = "none";
-    }
-}
+    hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("show");
+    });
