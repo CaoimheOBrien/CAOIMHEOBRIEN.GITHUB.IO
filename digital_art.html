@@ -36,8 +36,9 @@
             <button class ="filterButton" data-filter="conceptArt">Concept Art</button>
             <button class ="filterButton" data-filter="storyboard">Storyboards</button>
             <button class ="filterButton" data-filter="animation">Animations</button>
+            <button class ="filterButton" data-filter="threeD">3D</button>
             <button class ="filterButton" data-filter="game">Games</button>
-            <button class ="filterButton" data-filter="misc">Misc.</button>
+            <button class ="filterButton" data-filter="misc">Graphic Design</button>
     </div>
 
 <main>
@@ -116,22 +117,38 @@
                 </div>
             </div>
         </div>
-        <div class ="section" data-category="website" >
-            <h1 data-category="website">Websites</h1>
-            <div id="websites">
-                <div class="project" data-category="website" data-modal = "thisPortfolioModal">
-                    <img class="thumbnail" src="Assets/Caoimhe_lOGO_NoBG.png" alt="This Portfolio Thumbnail"> 
+        <div class ="section" data-category="threeD">
+            <h1 data-category="threeD">3D Models</h1>
+            <div id="threeDModels">
+                <div class="project" data-category="threeD" data-modal = "gunModal">
+                    <img class="thumbnail" src="Assets/3D/Gun/side_view_2_texture_ver2.jpg" alt="3D Model of a glock gun">
                     <div class="TextDescription">
-                        <h2>This Portfolio</h2>
-                        <p>Here is some of the process of creating this website. 
-                        <br><br>Click to find out more! </p>
+                        <h2>Gun</h2>
+                        <p>This is a 3D model I made in my fourth year of college for advanced 3D modeling module.
+                        <br><br>Click to find out more!</p>
                     </div>
                 </div>
-                <div class="project" data-category="website" data-modal = "SageAcademyModal">
-                    <img class="thumbnail" src="Assets/SageAcademy/SageAcademy1.png" alt="Old Portfolio Thumbnail">
+                <div class="project" data-category="threeD" data-modal = "stillLifeModal">
+                    <img class="thumbnail" src="Assets/3D/Still_life/submission_Still_Life_3_4s_View_Glassy_Texture_Arnold.jpg" alt="3D Model Thumbnail">
                     <div class="TextDescription">
-                        <h2>Sage Academy</h2>
-                        <p>Here is a portfolio website I made in college last year but I have since reworked it. 
+                        <h2>Still Life</h2>
+                        <p>This is a 3D model I made in my fourth year of college for advanced 3D modeling module.
+                        <br><br>Click to find out more!</p>
+                    </div>
+                </div>
+                <div class="project" data-category="threeD" data-modal = "lowPolyEnvModal">
+                    <img class="thumbnail" src="Assets/3D/low_poly_env/low_poly_env_render_1.jpg" alt="Low Poly render of a low poly woods environment">
+                    <div class="TextDescription">
+                        <h2>Low Poly Environment</h2>
+                        <p>This is a 3D model I made in my fourth year of college for advanced 3D modeling module.
+                        <br><br>Click to find out more!</p>
+                    </div>
+                </div>
+                <div class="project" data-category="threeD" data-modal = "halloweenModal">
+                    <img class="thumbnail" src="Assets/3D/halloween_music_video/frame_0010.png" alt="3D Model Thumbnail">
+                    <div class="TextDescription">
+                        <h2>Halloween Music Video</h2>
+                        <p>This is a 3D model I made in my fourth year of college for visual effects module.
                         <br><br>Click to find out more!</p>
                     </div>
                 </div>
@@ -149,16 +166,8 @@
                     </div>
                 </div>
 
-                <div class="empty" data-category="game">
-                    <!--Empty "project block" to keep the grid happy-->
-                </div>
-            </div>
-        </div>
-
-        <div class ="section" data-category="misc">
-            <h1>Miscellaneous</h1>
-            <div id="misc">
-                <div class="project" data-category="misc" data-modal = "gameAssetsModal">
+                <div id="games">
+                <div class="project" data-category="game" data-modal = "gameAssetsModal">
                     <img class="thumbnail" src="Assets/GameAssetsroject/menu_screen.png" alt="Game Assets Thumbnail">
                     <div class="TextDescription">
                         <h2>Game Assets</h2>
@@ -166,13 +175,39 @@
                         <br><br>Click to find out more!</p>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class ="section" data-category="misc">
+            <h1>Graphic Design</h1>
+            <div id="misc">
+                <div class="project" data-category="misc" data-modal = "canteenPosterModal">
+                    <img class="thumbnail" src="Assets/Graphic Design/CanteenPoster.jpg" alt="Canteen Poster Thumbnail">
+                    <div class="TextDescription">
+                        <h2>Canteen Poster</h2>
+                        <p>Here is a poster that I created for the canteen at Ferrycarrig Hotel.
+                        <br><br>Click to find out more!</p>
+                    </div>
+                </div>
                 <div class="project" data-category="misc" data-modal="optometryPosterModal">
-                    <img class="thumbnail" src="Assets/OptometryPoster.jpg" alt="Optometry Poster Thumbnail">
+                    <img class="thumbnail" src="Assets/Graphic Design/OptometryPoster.jpg" alt="Optometry Poster Thumbnail">
                     <div class="TextDescription">
                         <h2>Optometry Poster</h2>
                         <p>Here is a poster that I assisted in creating in my personal time.
                         <br><br>Click to find out more!</p>
                     </div>
+                </div>
+                <div id="misc">
+                <div class="project" data-category="misc" data-modal = "iconsModal">
+                    <img class="thumbnail" src="Assets/GameAssetsroject/menu_screen.png" alt="Icons for a portfolio ">
+                    <div class="TextDescription">
+                        <h2>Game Assets</h2>
+                        <p>Here are some icons I made for a peer's portfolio website.
+                        <br><br>Click to find out more!</p>
+                    </div>
+                </div>
+                <div class="empty" data-category="animation">
+                    <!--Empty "project block" to keep the grid happy-->
                 </div>
             </div>
         </div>
@@ -319,6 +354,7 @@
         </div>
     </div>
 </div>
+
 <!------------------ANIMATIONS----------------------------->
 <div id="enemiesAnimationModal" class="modal">
     <span class="close">&times;</span>
@@ -345,6 +381,91 @@
     </div>
 </div>
 
+<!------------------3D MODELS----------------------------->
+<div id="gunModal" class="modal">
+    <span class="close">&times;</span>
+    <!-- Modal content -->
+    <div class="modalContent">
+        <h2>Gun Model</h2>
+        <div>
+            <p>A hard surface prop of a glock gun made in Maya 2027. The prop was made out of one singular mesh and I used Arnold Substances to create the textures.
+                I also UV unwrapped the model for proper texture application. I also added lighting and rendering to the scene. </p>
+        </div>
+        <div class="gallery">
+            <button class="previous" onclick="changeSlide(-1)"><</button>
+            <img class="modalImageEnemy" src="Assets/3D/Gun/front_view_close_up_barrel_2_texture_ver2.jpg" alt="Front view of the gun barrel">
+            <img class="modalImageEnemy" src="Assets/3D/Gun/Screenshot 2026-11-02 110519.png" alt="Screenshot of the very basic gun shape with reference image in Maya">
+            <img class="modalImageEnemy" src="Assets/3D/Gun/Screenshot 2026-11-02 105134.png" alt="Second screenshot of the very basic gun shape with reference image in Maya">
+            <img class="modalImageEnemy" src="Assets/3D/Gun/messing_with_two_materials_2.png" alt="Screenshot of the gun with materials and render windows opened in Maya">
+            <img class="modalImageEnemy" src="Assets/3D/Gun/close_up_trigger_2_texture_ver2.jpg" alt="Close up of the trigger of the gun">
+            <img class="modalImageEnemy" src="Assets/3D/Gun/side_view_back_2_texture_ver_2.jpg" alt="Side view of the back of the gun">
+            <img class="modalImageEnemy" src="Assets/3D/Gun/with_bullet_2.jpg" alt="Gun with a bullet out of the chamber">
+            <button class="next" onclick="changeSlide(1)">></button>
+        </div>
+    </div>
+</div>
+
+<div id="stillLifeModal" class="modal">
+    <span class="close">&times;</span>
+    <!-- Modal content -->
+    <div class="modalContent">
+        <h2>Still Life</h2>
+        <div>
+            <p> A still life composition featuring a bottle with a few lemons. It was modelled and rendered in Maya. I unwrapped the UVs for proper texture application. </p>
+        </div>
+        <div class="gallery">
+            <button class="previous" onclick="changeSlide(-1)"><</button>
+            <img class="modalImageEnemy" src="Assets/3D/Still_life/submission_Still_Life_Front_View_Glassy_Texture_Arnold.jpg" alt="Screenshot of the very basic gun shape with reference image in Maya">
+            <img class="modalImageEnemy" src="Assets/3D/Still_life/submission_Still_Life_3_4s_View_Glassy_Texture_Arnold.jpg" alt="Front view of the gun barrel">
+            <img class="modalImageEnemy" src="Assets/3D/Still_life/submission_Still_Life_Front_View_Lighting_2_MayaHardWare2.png" alt="Screenshot of the gun with materials and render windows opened in Maya">
+            <img class="modalImageEnemy" src="Assets/3D/Still_life/submission_Still_Life_Front_View_Highlighting_The_Lemons_Arnold.jpg" alt="Second screenshot of the very basic gun shape with reference image in Maya">
+            <img class="modalImageEnemy" src="Assets/3D/Still_life/submission_Still_Life_Front_View_Lighting_SkyDome_Arnold.jpg" alt="Close up of the trigger of the gun">
+            <img class="modalImageEnemy" src="Assets/3D/Still_life/Extras_render.png" alt="Side view of the back of the gun">
+            <button class="next" onclick="changeSlide(1)">></button>
+        </div>
+    </div>
+</div>
+
+
+<div id="lowPolyEnvModal" class="modal">
+    <span class="close">&times;</span>
+    <!-- Modal content -->
+    <div class="modalContent">
+        <h2>Low Poly Environment</h2>
+        <div>
+            <p> A low poly environment composition featuring a simple scene with basic geometry. It was modelled and rendered in Maya. I used a mix of lamberts and preset material shaders to create the final look. </p>
+        </div>
+        <div class="gallery">
+            <button class="previous" onclick="changeSlide(-1)"><</button>
+            <img class="modalImageEnemy" src="Assets/3D/low_poly_env/low_poly_env_render_1.jpg" alt="Low Poly render of a low poly woods environment">
+            <img class="modalImageEnemy" src="Assets/3D/low_poly_env/low_poly_env_render_2.jpg" alt="Another view of the low poly environment">
+            <img class="modalImageEnemy" src="Assets/3D/low_poly_env/low_poly_env_render_3.jpg" alt="Third view of the low poly environment">
+            <img class="modalImageEnemy" src="Assets/3D/low_poly_env/low_poly_env_render_4.jpg" alt="Fourth view of the low poly environment">
+            <img class="modalImageEnemy" src="Assets/3D/low_poly_env/low_poly_env_render_5.jpg" alt="Fifth view of the low poly environment">
+            <button class="next" onclick="changeSlide(1)">></button>
+        </div>
+    </div>
+</div>
+
+
+<div id="halloweenModal" class="modal">
+    <span class="close">&times;</span>
+    <!-- Modal content -->
+    <div class="modalContent">
+        <h2>Halloween Music video</h2>
+        <div>
+            <p>This is a music video for a Halloween-themed song. It features animated elements and a dark, mysterious atmosphere. The video was created using a combination of 3D modeling and animation techniques. I used shapekeys and python scripting to do the animation.</p>
+            <br><br>
+        </div>
+        <div class="gallery">
+            <br>
+            <video width="700" height="500" controls>
+                <source src="Assets/3D/halloween_music_video/suzannes_halloween_music_video.mp4" type="video/mp4">
+                Sorry!! Your browser does not support HTML video.
+            </video>
+        </div>
+    </div>
+</div>
 <!------------------GAMES----------------------------->
 <div id="coffeeUtopiaModal" class="modal">
     <span class="close">&times;</span>
@@ -410,7 +531,25 @@
                 <br><br> Overall, I am very happy with how this poster turned out. It showcases my skills as a graphic designer and my ability to create engaging and visually appealing content. I am also very proud to have co-authored this publication and to have contributed to the field of optometry in this way.
             </p>
         </div>
-        <img class="modalImageOPPos" src="Assets/OptometryPoster.jpg" alt="Optometry Poster">
+        <img class="modalImageOPPos" src="Assets/Graphic Design/OptometryPoster.jpg" alt="Optometry Poster">
+    </div>
+</div>
+
+<div id="Modal" class="modal">
+    <span class="close">&times;</span>
+    <!-- Modal content -->
+    <div class="modalContent">
+        <h2>Optometry Poster</h2>
+        <div>
+            <p>
+                This is a poster that I worked on in my personal time. I worked with an optometrist to create a poster to highlight certain statistics about eye health that they had recently written a paper on. He wanted an aide for his presentation to the Eurpopean Union of Optometry.
+                <br><br> In addition to working with the author on the design and typography of the poster for display I also assisted with the data analysis and am named co-author of this academic peer-reviewed publication which was published / displayed at the 2025 European Academy of Optometry & Optics in Ljubljana. 
+                <br><br> I used Adobe Photoshop to create the poster, focusing on a clean and professional design. I used a combination of images and text to create a visually appealing poster that would catch the attention of potential patients.
+                <br><br> I made sure to pay attention to the typography and layout of the poster to ensure that it was easy to read and understand. I used a color scheme that was consistent with the optometrist's branding, using blues and greens to create a calming and professional look as well as ensuring that it could be read by people with a variety of different levels of colour blindess. 
+                <br><br> Overall, I am very happy with how this poster turned out. It showcases my skills as a graphic designer and my ability to create engaging and visually appealing content. I am also very proud to have co-authored this publication and to have contributed to the field of optometry in this way.
+            </p>
+        </div>
+        <img class="modalImageOPPos" src="Assets/Graphic Design/OptometryPoster.jpg" alt="Optometry Poster">
     </div>
 </div>
 
