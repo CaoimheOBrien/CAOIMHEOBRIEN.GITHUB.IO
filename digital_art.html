@@ -182,7 +182,7 @@
             <h1>Graphic Design</h1>
             <div id="misc">
                 <div class="project" data-category="misc" data-modal = "canteenPosterModal">
-                    <img class="thumbnail" src="Assets/Graphic Design/CanteenPoster.jpg" alt="Canteen Poster Thumbnail">
+                    <img class="thumbnail" src="Assets/Graphic Design/Rainbow Bunting Version_20261018_182024_0001.png" alt="Canteen Poster Thumbnail">
                     <div class="TextDescription">
                         <h2>Canteen Poster</h2>
                         <p>Here is a poster that I created for the canteen at Ferrycarrig Hotel.
@@ -199,9 +199,9 @@
                 </div>
                 <div id="misc">
                 <div class="project" data-category="misc" data-modal = "iconsModal">
-                    <img class="thumbnail" src="Assets/GameAssetsroject/menu_screen.png" alt="Icons for a portfolio ">
+                    <img class="thumbnail" src="Assets/Graphic Design/JamiesPNGs/Phone_transparentBG.png" alt="Icons for a portfolio ">
                     <div class="TextDescription">
-                        <h2>Game Assets</h2>
+                        <h2>Icons for Peer's website</h2>
                         <p>Here are some icons I made for a peer's portfolio website.
                         <br><br>Click to find out more!</p>
                     </div>
@@ -535,21 +535,49 @@
     </div>
 </div>
 
-<div id="Modal" class="modal">
+<div id="iconsModal" class="modal">
     <span class="close">&times;</span>
     <!-- Modal content -->
     <div class="modalContent">
-        <h2>Optometry Poster</h2>
+        <h2>Icons Poster</h2>
         <div>
             <p>
-                This is a poster that I worked on in my personal time. I worked with an optometrist to create a poster to highlight certain statistics about eye health that they had recently written a paper on. He wanted an aide for his presentation to the Eurpopean Union of Optometry.
-                <br><br> In addition to working with the author on the design and typography of the poster for display I also assisted with the data analysis and am named co-author of this academic peer-reviewed publication which was published / displayed at the 2025 European Academy of Optometry & Optics in Ljubljana. 
-                <br><br> I used Adobe Photoshop to create the poster, focusing on a clean and professional design. I used a combination of images and text to create a visually appealing poster that would catch the attention of potential patients.
-                <br><br> I made sure to pay attention to the typography and layout of the poster to ensure that it was easy to read and understand. I used a color scheme that was consistent with the optometrist's branding, using blues and greens to create a calming and professional look as well as ensuring that it could be read by people with a variety of different levels of colour blindess. 
-                <br><br> Overall, I am very happy with how this poster turned out. It showcases my skills as a graphic designer and my ability to create engaging and visually appealing content. I am also very proud to have co-authored this publication and to have contributed to the field of optometry in this way.
+                These are icons that I created for a peer's portfolio. They are designed to be simple and recognizable, with a consistent style and color scheme. 
+                I used Krita to create the icons. The peer wanted a set of icons that had a cartoonish style but were still realistically proportioned.
             </p>
         </div>
-        <img class="modalImageOPPos" src="Assets/Graphic Design/OptometryPoster.jpg" alt="Optometry Poster">
+        <div class="gallery">
+            <button class="previous" onclick="changeSlide(-1)"><</button>
+            <img class="modalImage" src="Assets/Graphic Design/JamiesPNGs/Phone_transparentBG.png" alt="Purple Phone Icon">
+            <img class="modalImage" src="Assets/Graphic Design/JamiesPNGs/Boat_lines_on_lines_transparentBG.png" alt="Green 3D printed boats Icon">
+            <img class="modalImage" src="Assets/Graphic Design/JamiesPNGs/saw_TransparentBG.png" alt="Saw Icon">
+            <img class="modalImage" src="Assets/Graphic Design/JamiesPNGs/Solder_transparentBG.png" alt="Soldering Iron Icon">
+            <img class="modalImage" src="Assets/Graphic Design/JamiesPNGs/watch_transparentBG.png" alt="Orange Watch Icon">
+            <button class="next" onclick="changeSlide(1)">></button>
+        </div>
+    </div>
+</div>
+
+
+<div id="canteenModal" class="modal">
+    <span class="close">&times;</span>
+    <!-- Modal content -->
+    <div class="modalContent">
+        <h2>Canteen Poster</h2>
+        <div>
+            <p>
+                This is a poster that I worked on in my personal time. I worked with Ferrycarrig hotel to create a poster for them to display in their canteen. The poster was to highlight the different important topics for employees to be aware of during work.
+                <br><br> I used Canva to create the poster. I used a combination of images and text to create a visually appealing poster that would catch the attention of employees. The customer wanted a bright and colourful poster to make it more engaging for employees to read. I used a color scheme that was consistent with the Ferrycarrig Hotel's branding. I included light blues and white as well as incoprorating the storks imagery to create a fun and engaging look.
+            </p>
+        </div>
+        <div class="gallery">
+            <button class="previous" onclick="changeSlide(-1)"><</button>
+                <div><img class="modalImageOPPos" src="Assets/Graphic Design/design_irl.jpg" alt="Canteen Poster on the actual wall of the Ferrycarrig Hotel Canteen"> The poster on the actual wall of the Hotel Staff canteen.</div>
+                <div><img class="modalImageOPPos" src="Assets/Graphic Design/Blue Bunting Version_20261018_182051_0000.png" alt="Canteen Poster on the actual wall of the Ferrycarrig Hotel Canteen"> The original design of the poster before any customer feedback.</div>
+                <div><img class="modalImageOPPos" src="Assets/Graphic Design/Rainbow Bunting Version_20261018_182157_0000.png" alt="Canteen Poster on the actual wall of the Ferrycarrig Hotel Canteen"> The second design of the poster before any customer feedback.</div>
+                <div><img class="modalImageOPPos" src="Assets/Graphic Design/Rainbow Bunting Version_20261018_182024_0001.png" alt="Canteen Poster on the actual wall of the Ferrycarrig Hotel Canteen"> The redesign of the poster after customer feedback.</div>
+                <button class="next" onclick="changeSlide(1)">></button>
+        </div>
     </div>
 </div>
 
