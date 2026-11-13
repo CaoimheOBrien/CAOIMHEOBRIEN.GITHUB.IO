@@ -391,7 +391,7 @@ td{
 #aboutMeAside{
     width: 50%;
     max-width: 350px;
-    margin: 4rem 2rem;
+    margin: 4rem 12rem;
     padding: 1rem;
     float: right;
     background: var(--accent-light);
@@ -416,7 +416,7 @@ td{
     margin: auto; 
     width: 100%;
     min-width: 100px;
-    max-width: 2800px;
+    max-width: 3800px;
     height: 100%;
     max-height: 120vh;
     background: rgba(10, 10, 10, 0.7);
@@ -525,9 +525,8 @@ footer {
     padding: 1rem 0.5rem;
     background: var(--card-bg);
     color: var(--light-text);
-    margin-top: 3rem;
+    margin-top: 13rem;
     bottom: 0;
-    border-top: 1px solid #e5e5e5;
     animation: fadeIn 0.8s ease;
 }
 

@@ -16,7 +16,7 @@
                 <img src="Assets/Logos/cob_animations_logo_transparent.png" alt="Logo" id="logo-image">
             </div>
             <div id="PageTitle">
-                <h1>Caoimhe O'Brien's Projects</h1>
+                <h1>Caoimhe O'Brien's UX/UI Projects</h1>
             </div>
             <nav class="nav">
                 <button class="hamburger" id="hamburger">
@@ -33,9 +33,6 @@
 
     <div id="optionFilterBar">
             <button class ="filterButton" data-filter="all">All</button>
-            <button class ="filterButton" data-filter="conceptArt">Concept Art</button>
-            <button class ="filterButton" data-filter="storyboard">Storyboards</button>
-            <button class ="filterButton" data-filter="animation">Animations</button>
             <button class ="filterButton" data-filter="website">Websites</button>
             <button class ="filterButton" data-filter="game">Games</button>
             <button class ="filterButton" data-filter="misc">Misc.</button>
@@ -43,80 +40,6 @@
 
 <main>
     <div id="projectsContainer">
-        <div class ="section" data-category="conceptArt">
-            <h1 data-category="conceptArt">Concept Art</h1>
-            <div id="conceptArts">
-                <div class="project" data-category="conceptArt" data-modal = "stCuanModal">
-                    <img class="thumbnail" src="Assets/ConceptArt/St Cuan Thumbnail.png" alt="St Cuan Thumbnail">
-                    <div class="TextDescription">
-                        <h2>St Cuan for Dingle Animation</h2>
-                        <p>This is a character I made for a games sting for the 2026 Dingle Animation Festival.
-                        <br><br>Click to find out more!</p>
-                    </div>
-                </div>
-                <div class="project" data-category="conceptArt" data-modal = "cowModal">
-                    <img class="thumbnail" src="Assets/ConceptArt/CowThumbnail.png" alt="Cow Thumbnail">
-                    <div class="TextDescription">
-                        <h2>Cow for Dingle Animation</h2>
-                        <p>This is a character I made for a games sting for the 2026 Dingle Animation Festival.
-                        <br><br>Click to find out more!</p>
-                    </div>
-                </div>
-                <div class="project" data-category="conceptArt" data-modal = "stingBGModal">
-                    <img class="thumbnail" src="Assets/ConceptArt/AD - Logo BW - Horinzontal.png" alt="Dingle Animation Logo">
-                    <div class="TextDescription">
-                        <h2>Backgrounds for Dingle Animation</h2>
-                        <p>These are backgrounds I made for a games sting for the 2026 Dingle Animation Festival.
-                        <br><br>Click to find out more!</p>
-                    </div>
-                </div>
-                <div class="project" data-category="conceptArt" data-modal="LiliLasourrisModal">
-                    <img class="thumbnail" src="Assets/ConceptArt/Lili Lasourris Thumbnail.png" alt="Lili Lasourris Thumbnail">
-                    <div class="TextDescription">
-                        <h2>Lili Lasourris</h2>
-                        <p>This is an original character for a concept art project that I am working on in my spare time. 
-                        <br><br>Click to find out more!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="section" data-category="storyboard">
-            <h1 data-category="storyboard">Storyboards</h1>
-            <div id="storyboards">
-                <div class="project" data-category="storyboard" data-modal = "MorningRoutineStoryboards">
-                    <img class="thumbnail" src="Assets/ConceptArt/Storyboard_MorningRoutine_AllBoards.png" alt="Storyboard Thumbnail">
-                    <div class="TextDescription">
-                        <h2>Storyboard for Morning Routine</h2>
-                        <p>This is a storyboard I made for a 2D animation I made for one of my class in university using Adobe Animate.
-                        <br><br>Click to find out more!</p> 
-                    </div>
-                </div>
-                <div class="project" data-category="storyboard" data-modal="operaSingerStoryboard">
-                    <img class="thumbnail" src="Assets/Storyboard/Opera Singer Thumbnail.png" alt="Opera Singer Storyboard Thumbnail">
-                    <div class="TextDescription">
-                        <h2>Storyboard for Opera Singer</h2>
-                        <p>This is a storyboard I made for a 2D animation I made for one of my class in university using Adobe Animate.
-                        <br><br>Click to find out more!</p> 
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class ="section" data-category="animation">
-            <h1 data-category="animation">Animations</h1>
-            <div id="animations">
-                <div class="project" data-category="animation" data-modal = "enemiesAnimationModal">
-                    <img class="thumbnail" src="Assets/EnemyAnimation/enemy1_idle.gif" alt="Enemy Animations Thumbnail">
-                    <div class="TextDescription">
-                        <h2>Enemy Animations</h2>
-                        <p>This is a 2D animation I made in my second year of college for a Concept Art for Games module.
-                        <br><br>Click to find out more!</p>
-                    </div>
-                </div>
-                <div class="empty" data-category="animation">
-                    <!--Empty "project block" to keep the grid happy-->
-                </div>
-            </div>
-        </div>
         <div class ="section" data-category="website" >
             <h1 data-category="website">Websites</h1>
             <div id="websites">
@@ -182,171 +105,7 @@
 
 
 <!--Modals-->
-
-<!------------------CONCEPT ART----------------------------->
-<div id="stCuanModal" class="modal">
-    <span class="close">&times;</span>
-    <div class="modalContent">
-        <h2>Behind This Project</h2>
-            <div>
-            <p>This is a character that I created for our Dingle Animation 2025 Sting. The theme was "An Phiast's Untold Story" so we decided that our would be "An Phiast, An Spiaire" so An Phiast was an undercover spy that went around to different villages making sure that there is no evil animals. 
-                <br> <br>St Cuan is the villain of the game. I explored different styles and shapes for the character, I knew  I wanted him to have a long, looming presence and to be quite angular to contrast An Phiast. I explored different art styles. 
-            </p>
-        </div>
-        <div class="gallery">
-            <button class="previous" onclick="changeSlide(-1)"><</button>
-            <div class="modalImage"><img src="Assets/ConceptArt/St Cuan Sketches.png" alt="Primary sketches">These are primary sketches for St Cuan.</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/Slide5.JPG" alt="Character moodboard">This is a moodboard for the character.</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/St Cuan's Staff.png" alt="Staff ideas">These are some ideas for St Cuan's staff. This did not make it into the final design or the game</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/CharacterTurnaround.png" alt="Final Character turnaround">This is the final character turnaround.</div>
-            <button class="next" onclick="changeSlide(1)">></button>
-        </div>
-    </div>
-</div>
-<div id="cowModal" class="modal">
-    <span class="close">&times;</span>
-    <div class="modalContent">
-        <h2>Behind This Project</h2>
-        <div>
-            <p>This is a character that I created for our Dingle Animation 2025 Sting. The theme was "An Phiast's Untold Story" so we decided that our would be "An Phiast, An Spiaire" so An Phiast was an undercover spy that went around to different villages making sure that there is no evil animals. 
-                I explored different styles and shapes for the character, I knew I wanted her to be goofy and quite silly as she is a harmless character. She has an attitude and thinks that she is better than everyone so I juxta positioned her confidence with her hair and exaggerated shapes. 
-                <br><br> Additionally, I incorporated vibrant colors and dynamic poses to reflect her energetic personality, making her relatable and endearing to the audience. 
-                This approach not only enhances her visual appeal but also aligns with the lighthearted theme of the project, inviting viewers to connect with her story.
-            </p>
-        </div>
-        <div class="gallery">
-        <button class="previous" onclick="changeSlide(-1)"><</button>
-        <div class="modalImage"><img src="Assets/ConceptArt/CowThumbnail.png" alt="Cow Thumbnail">This is a thumbnail for Cow. She is the funny hench-cow of St. Cuan</div>
-        <div class="modalImage"><img src="Assets/ConceptArt/Slide6.JPG" alt="Character Moodboard">This is a moodboard for Cow.</div>
-        <div class="modalImage"><img src="Assets/ConceptArt/cow.png" alt="Front View of Cow">This is a front view of the Cow character.</div>
-        <button class="next" onclick="changeSlide(1)">></button>
-        </div>
-    </div>
-</div>
-
-<div id="stingBGModal" class="modal">
-    <span class="close">&times;</span>
-    <!-- Modal content -->
-    <div class="modalContent">
-        <h2>Behind This Project</h2>
-        <img class="dingleLogo" src="Assets/ConceptArt/AD - Logo BW - Horinzontal.png" alt="Animation Dingle Logo">
-        <div>
-            <p>These are some backgrounds that I made for my Dingle Animation Game Sting 2026 I created 2 of the 5 locations for this game. </p>
-        </div>
-        <div class="gallery">
-            <button class="previous" onclick="changeSlide(-1)"><</button>
-            <div class="modalImage"><img src="Assets/ConceptArt/Background_AnPhiastCave.png" alt="Background for An Phiast's Cave"><p>This background depicts An Phiast's cave - a moody, atmospheric cavern used in the sting. This is where the characters have their "mission board", which holds their progress in the game.
-                <br><br>Key choices: light from outside as the primary rim light, cool ambient fill for depth, textured rock surfaces, subtle fog and light shafts to suggest scale as well as waterfall, and small details (stalactites, stalagmites) to add story.</p>
-            </div>
-            <div class="modalImage">
-                <img src="Assets/ConceptArt/LakeCorrailli.png" alt="Lake Corrailli">
-                <p>This background depicts Lake Corrailli - the lake where An Phiast confronts St Cuan (spoiler I'm sorry).
-                <br><br>Key choices: Lucious green grass and foilage surrounding the gorgeous blue lake.</p>
-            </div>
-            <button class="next" onclick="changeSlide(1)">></button>
-        </div>
-    </div>
-</div>
-
-
-<div id="LiliLasourrisModal" class="modal">
-    <span class="close">&times;</span>
-    <!-- Modal content -->
-    <div class="modalContent">
-        <h2>Behind This Project</h2>
-        <div>
-        <p>This is Lili Lasourris, a character that I made as concept art for a short film, "Lasourris Très Bizarre", which translates to "Very Strange Lasourris". It is a short film set in Marseilles, France which follows Lili, a young girl who is trying her best to navigate the complexities of her daily life.
-        <br><br>Lili is a shy, young girl who does not have any whiskers, unlike the other rodents, this makes it hard for people to understand what she's feeling sometimes, she also finds it hard to read other peoples whiskers. She is the youngest of three, with her siblings having moved to the city, but Lili has committed herself to the quiet life.
-        <br><br>She is a curious and determined girl who faces various challenges throughout the film as she is not like the other rodents in her village. This short film would explore these of growing up with a neurodivergency, family, culture and rural life.
-        <br><br>Lasourris is a play on the words "La Souris" which means "the mouse" in French.
-    </p>
-        </div>
-        <div class="gallery">
-            <button class="previous" onclick="changeSlide(-1)"><</button>
-            <div class="modalImage"><img src="Assets/ConceptArt/Lili Mouse - Base Design.png" alt="Lili Lasourris"></div>
-            <div class="modalImage"><img src="Assets/ConceptArt/Lili Lasourris Moodboard.png" alt="Lili Lasourris Moodboard"></div>
-            <div class="modalImage"><img src="Assets/ConceptArt/lilMouse_CharacterExploration.png" alt="Lili Lasourris Character Design"></div>
-            <div class="modalImage"><img src="Assets/ConceptArt/lilMouse_Turnaround.png" alt="Lili Lasourris Character Turnaround"></div>
-            <div class="modalImage"><video id="liliVideo" width="300" height="400" controls><source src="Assets/ConceptArt/lilMouse_EyeAnimatiom.mp4" type="video/mp4">Oops, this browsers cannot play this video</video></div>
-            <button class="next" onclick="changeSlide(1)">></button>
-        </div>
-    </div>
-</div>
-
-<!------------------STORYBOARDS----------------------------->
-<div id="MorningRoutineStoryboards" class="modal">
-    <span class="close">&times;</span>
-    <div class="modalContent">
-        <h2>Behind This Project</h2>
-        <div>
-            <p>These are the storyboards for a 2D animatic I made for one of my class in university using Adobe Animate. The animatic is about a character's morning routine and the storyboards were created to plan out the different scenes and shots.
-                <br><br>Our class was told to create a storyboard for "something" and so I decided to put together my morning routine, to reflect on how I take certain, seemingly mundane, aspects of my day for granted. It was also an early morning class so, my morning routine was still on my mind.  
-                <br><br>Once I had chosen an idea, I wrote a basic script and colour coded it. Upon finishing the script, I created rough thumbnails for each of the shots. I paid attention to the composition and framing of each panel to ensure that it would be visually appealing and effective in conveying the story.
-                <br><br>Using the thumbnails I created an in-depth story board using Adobe Photoshop. I chose not to use colour in my animatic as Ireland most often has dull, foggy mornings. Once I finished the panels I put them together in Adobe Animate and After Effects to add sound and other sound effects that I found on youtube/ recorded myself. All SFX are not copyrighted and are free to use. The vocals were recorded by my classmate; Liam Treacy.
-            </p>
-        </div>
-        <div class="gallery">
-            <button class="previous" onclick="changeSlide(-1)"><</button>
-            <div class="modalImage"><img src="Assets/ConceptArt/Storyboard_MorningRoutine_AllBoards.png" alt="Storyboard Thumbnail">This is the full storyboard</div>
-            <div class="modalImage"><video id="morningRoutineVideo" width="600" height="400" controls><source src="Assets/ConceptArt/MorningRoutine_Animatic.mp4" type="video/mp4">Oops, this browsers cannot play this video</video><br>Here is the animatic from this storyboard.</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/Amy_ShouldersBackDown.png" alt="Concept art of Amy the main character">Concept art of the "Amy", the character in the animatic.</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/Morning Routine Script.png" alt="Panel 3 of the storyboard">Here is the end of the script with my notes highlighted. <br>Yellow was for setting, purple for props, blue for character action, red for camera action & effects in green.<br></div>
-            <div class="modalImage"><img src="Assets/ConceptArt/1.png" alt="First panel of the storyboard">First panel of the storyboard with the notes from my script.</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/2_NoAmy.png" alt="Amy's wardrobe">Amy's Wardrobe - the background of panel 2 without Amy</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/2.png" alt="Panel 2 of the storyboard">Panel 2 of the storyboard - with Amy and my notes.</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/7.png" alt="7th panel of the storyboard">Seventh panel of the storyboard</div>
-            <div class="modalImage"> <img src="Assets/ConceptArt/8_CarGone_notpanel.png" alt="Moodboard for the animation">Town background in the animatic</div>
-            <div class="modalImage"><img src="Assets/ConceptArt/11.png" alt="Final panel of the storyboard">Final panel of the storyboard</div>
-            <button class="next" onclick="changeSlide(1)">></button>
-        </div>
-    </div>
-</div>
-
-<div id="operaSingerStoryboard" class="modal">
-    <span class="close">&times;</span>
-    <div class="modalContent">
-        <h2>Behind This Project</h2>
-        <div>
-            <p>These are the storyboards for a 2D animation I made for one of my class in university using Adobe Animate. We had to create an "unconventional representation of time".
-            <br><br>I started by throwing all my ideas into a mindmap using Figma, then from those ideas I took my top 3 and presented them to my lecturer. Based on his advice and insight, I chose my idea which I named "The Celestial Performer". Originally I wanted to depict a dancer moving across the stage but due to time constaints I went with a singer instead as it still conveyed the spirit of the idea.
-            <br><br>
-            </p>
-        </div>
-        <div class="gallery">
-            <button class="previous" onclick="changeSlide(-1)"><</button>
-            <div class="modalImage"><img src="Assets/Storyboard/Opera Singer with Moon Clock Full Storyboard.png" alt="Full storyboard for Opera Singer with Moon Clock"></div>
-            <div class="modalImage"><img src="Assets/Storyboard/Opera Singer Brainstorm.png" alt="Brainstorm of ideas for unconventional representation of time"></div>
-            <button class="next" onclick="changeSlide(1)">></button>
-        </div>
-    </div>
-</div>
-<!------------------ANIMATIONS----------------------------->
-<div id="enemiesAnimationModal" class="modal">
-    <span class="close">&times;</span>
-    <!-- Modal content -->
-    <div class="modalContent">
-        <h2>Enemy Animation</h2>
-        <div>
-            <p>
-                I created this 2D animation as part of a Concept Art for Games module in Semester 1 of Year 2 of my degree.
-            <br><br>The animation was created using a pixelated art style to give it a retro feel. I used a limited color palette to create a cohesive look and feel for the animation.
-            <br><br> I started by sketching out the basic design for the enemy character. I then created a series of frames for the animation using a software called Aesprite, focusing on the movement and actions of the character.
-            <br><br> I used a combination of traditional animation techniques and digital tools to create the animation. I made sure to pay attention to the timing and spacing of the animation to ensure that it was smooth and fluid, especially since it was going ot be used in a game.
-            <br><br> Overall, I am very happy with how this animation turned out. It showcases my skills as an animator and my ability to create engaging and visually appealing content.
-            </p>
-        </div>
-        <div class="gallery">
-        <button class="previous" onclick="changeSlide(-1)"><</button>
-        <img class="modalImageEnemy" src="Assets/EnemyAnimation/Enemy_Thumbnail.png" alt="Character Turnaound">
-        <img class="modalImageEnemy" src="Assets/EnemyAnimation/enemy1_idle.gif" alt="Enemy Idle Animation">
-        <img class="modalImageEnemy" src="Assets/EnemyAnimation/enemy1_shooting.gif" alt="Enemy Attack Cycle Animation">
-        <img class="modalImageEnemy" src="Assets/EnemyAnimation/enemy1_expire.gif" alt="Enemy Expire Animation">
-        <button class="next" onclick="changeSlide(1)">></button>
-        </div>
-    </div>
-</div>
-
-<!------------------WEBSITES---------------------------
+<!------------------WEBSITES--------------------------->
 <div id="SageAcademyModal" class="modal">
     <span class="close">&times;</span>
     Modal content 
@@ -405,7 +164,7 @@
         <img class="modalImageOP" src="Assets/OldPortfolio/Portfolio_PROJECTS_ReadMoreToggled_old.jpeg" alt="My old portfolio projects page with read more toggled">
         <img class="modalImageOP" src="Assets/OldPortfolio/Portfolio_CONTACT_old.png" alt="My old portfolio contact me page">
     </div>
-</div> -->
+</div>
 
 <!------------------GAMES----------------------------->
 <div id="coffeeUtopiaModal" class="modal">
@@ -481,6 +240,6 @@
 </body>
 
 <footer>
-    <span style="position: static; align-content: end;"><p>&copy; 2026 Caoimhe O'Brien | 2026 COB Animations </p></span>
+    <span style="position: static; align-content: end;"><p>&copy; 2026 Caoimhe O'Brien | 2026 COB Media </p></span>
 </footer>
 </html>
